@@ -27,7 +27,6 @@ async def create_task(task_params: TaskParams):
         )
 
     return await get_task_meta_dict()
-    # todo: надо обработать ошибки
 
 
 @app.delete("/task")
@@ -39,5 +38,4 @@ async def cancel_task():
             status_code=400,
             detail="there are no running tasks",
         )
-    # todo: надо обработать ошибки
     return 'Success'
